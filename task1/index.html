@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="image-box">
+            <div class="overlay">
+                <img src="./assets/images/odin-lined.png" alt="odin-lined">
+                <span class="brand">ODIN</span>
+            </div>
+            <span class="credit">photo by Halie West on Unspalsh</span>
+        </section>
+        <section class="signup-box">
+            <div class="text-section">
+                <h6>This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams.<br>Sign up now and get started</h6>
+                <span>You <i>know</i> you want to.</span>
+            </div>
+            <form action="" class="form-section">
+                <section class="input-section">
+                    <h4 class="form-heading">Let's do this!</h4>
+                    <div class="form-elements">
+                        <div class="form-group">
+                            <label for="fname">first name</label>
+                            <input type="text" name="firstname" id="fname">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lname">last name</label>
+                            <input type="text" name="lastname" id="lname">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="text" name="phone" pattern="[0-9]{11,15}" id="phone">
+                        </div>
+
+                        <div class="form-group pass">
+                            <label for="password">password</label>
+                            <input class="error" type="password" name="password" id="password">
+                            <span class="pass-error"></span>
+                        </div>
+
+                        <div class="form-group pass">
+                            <label for="c-password">Confirm password</label>
+                            <input type="password" class="error" name="password_confirm" id="c-password">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="submit-section">
+                    <input type="submit" class="submit" value="create account">
+                    <span style="display: block;">Already have an account? <a href="#">Log in</a></span>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
