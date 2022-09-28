@@ -1,0 +1,82 @@
+@import url('./menucart.css');
+
+main section.content{
+    flex-basis: 65%;
+    /* background-color: aqua; */
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-template-areas:    "hd hd hd hd"
+                            "item1 item2 item3 item4"
+                            "item5 item6 item7 item8"
+                            ". more more .";
+} 
+
+main section.content .header{
+    grid-area: hd;
+}
+
+main section.content .more-btn{
+    text-align: center;    
+    grid-area: more;
+}
+
+/* main section.content .more-btn a{
+    
+} */
+
+main section.content h3{
+    display: inline-block;
+    border-bottom: 4px solid #F1D5BB;
+    margin: 0;   
+    font-weight: 400;
+    font-size: 2.125rem;
+}
+
+main section.content .item1{grid-area: item1;}
+main section.content .item2{grid-area: item2;}
+main section.content .item3{grid-area: item3;}
+main section.content .item4{grid-area: item4;}
+main section.content .item5{grid-area: item5;}
+main section.content .item6{grid-area: item6;}
+main section.content .item7{grid-area: item7;}
+main section.content .item8{grid-area: item8;}
+
+main section.content .items img{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+
+    body{
+        overflow: auto;
+    }
+    main section.content{
+        flex-basis: 100%;
+        grid-template-areas:    "hd hd hd hd"
+                                "item1 item1 item2 item2"
+                                "item3 item3 item4 item4"
+                                "item5 item5 item6 item6"
+                                "item7 item7 item8 item8"
+                                ". more more .";
+    } 
+
+}
+
+
+/* medium */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    body{
+        overflow: hidden;
+    }
+    /* main{    
+        height: 100vh;
+        width: 95%;
+    } */
+    
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+}
+main{
+    width: 100%;
+    position: relative;    
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.slide{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: coral;
+}
+.slide img{
+    object-fit:fill;
+    width: 100% !important;
+    height: 100vh;
+}
+.slide-text{
+    position: absolute;
+    z-index: 20;    
+}
+main .content{
+    width: 60%;
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    text-align: center;
+    /* width: 100%; */
+}
+.navs-btn{
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    width: 25px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 45%;
+    /* padding: 1rem; */
+    z-index: 180;
+}
+main .next{   
+    right: 6%;
+    background-image: url('../icons/keyboard_arrow_right_24px.png');
+}
+
+main .previous{
+    left: 6%;
+    background-image: url('../icons/keyboard_arrow_left_24px.png');
+}
+main .content h2{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+main .content h2 .emp{
+    font-weight: 800;
+}
+main .content p{
+    margin-bottom: 2rem;
+    font-size: 1.56rem;
+
+}
+.content .action-btn a{
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: .3rem 1.8rem;
+    font-family: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.87rem;
+}
+.content .action-btn a:first-child{
+    margin-right: 5px;
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+
+    main .content h2{
+        font-size: 2.5rem;
+    }
+    main .content p{
+        font-size: 1rem;
+    
+    }
+    .content .action-btn a{
+        font-size: 1rem;
+    }
+}
+
+
+/* medium */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    /* body{
+        overflow: hidden;
+    } */
+    /* main{    
+        height: 100vh;
+        width: 95%;
+    } */
+    
+}

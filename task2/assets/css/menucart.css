@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    margin: 0;
+    width: 90%;
+    color: #0C0B0B;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1;
+    grid-template-areas: "sidenav main main main main main";
+}
+
+main {
+    /* background-color: yellow; */
+    width: 100%;
+    display: flex;
+}
+
+.aside {
+    grid-area: sidenav;
+    position: fixed;
+    height: 100vh;
+    padding: .5rem .8rem;
+    display: flex;
+    align-items: center;
+}
+
+.aside .sidenav {
+    box-shadow: .05rem 0 6px rgba(12, 11, 11, .5);
+    border-radius: 1rem;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #0C0B0B;
+}
+
+.aside .sidenav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.page-content {
+    grid-area: main;
+}
+
+section.content .product-title {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.aside .sidenav,
+.aside .sidenav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aside .sidenav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.aside .sidenav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    padding: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.aside .sidenav ul li a img {
+    display: block;
+    width: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    margin-left: auto;
+    width: 100%;
+}
+
+footer span {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-dark {
+    border-radius: 2px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: .4rem .9rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+    body {
+
+        width: 100%;
+        /* grid-template-columns: repeat(6, 1fr); */
+        /* gap: 15px; */
+        grid-template-rows: 2;
+        grid-template-areas: "sidenav sidenav sidenav sidenav sidenav sidenav"
+            "main main main main main main";
+            justify-content: center;
+    }
+
+    .aside {
+        grid-area: sidenav;
+        position: sticky;
+        top: 0;
+        width: 100vw;
+        height: auto;
+        padding: .5rem .8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .aside .sidenav {
+        width: 100%;
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .page-content {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .aside .sidenav,
+    .aside .sidenav ul {
+        align-items: stretch;
+        flex-direction: row;
+    }
+
+    section.content .product-title {
+        font-size: .9rem;
+    }
+
+    .aside .sidenav ul li a {
+        height: 100%;
+        margin-bottom: 0px;
+        margin-right: 5px;
+    }
+
+}
